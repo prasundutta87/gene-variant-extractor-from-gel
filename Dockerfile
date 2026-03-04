@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install latest CRAN versions of R packages
-RUN R -e "install.packages(c('tidyverse','argparse','duckdb','duckplyr'), repos='https://cloud.r-project.org')"
+RUN R -e "install.packages(c('tidyverse','argparser','duckdb','duckplyr'), repos='https://cloud.r-project.org')"
 
 # Set the default directory
 WORKDIR /workspace
